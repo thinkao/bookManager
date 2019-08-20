@@ -10,7 +10,6 @@ import javax.validation.constraints.NotBlank;
 public class UserInsertDto {
 
     @ApiModelProperty("${item.note}")
-    @NotBlank(message = "${item.note}不能为空")
     public String user_id;
 
     @ApiModelProperty("${item.note}")

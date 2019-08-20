@@ -15,7 +15,7 @@ public class Users {
     @Column(length = 32)
     private String user_name;
     @Column(length = 32)
-    private String user_adder;
+    private String user_addr;
     @Column(length = 32)
     private String user_account;
     @Column(length = 32,nullable = false)
@@ -26,10 +26,10 @@ public class Users {
     public Users() {
     }
 
-    public Users(String user_id, String user_name, String user_adder, String user_account, String user_pass, String user_phone) {
+    public Users(String user_id, String user_name, String user_addr, String user_account, String user_pass, String user_phone) {
         this.user_id = user_id;
         this.user_name = user_name;
-        this.user_adder = user_adder;
+        this.user_addr = user_addr;
         this.user_account = user_account;
         this.user_pass = user_pass;
         this.user_phone = user_phone;
@@ -51,12 +51,12 @@ public class Users {
         this.user_name = user_name;
     }
 
-    public String getUser_adder() {
-        return user_adder;
+    public String getUser_addr() {
+        return user_addr;
     }
 
-    public void setUser_adder(String user_adder) {
-        this.user_adder = user_adder;
+    public void setUser_addr(String user_addr) {
+        this.user_addr = user_addr;
     }
 
     public String getUser_account() {

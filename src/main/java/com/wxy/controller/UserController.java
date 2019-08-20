@@ -52,9 +52,19 @@ public class UserController {
         }
 
         Users users = new Users();
+        String user_account = dto.getUser_account();
+        String user_pass = dto.getUser_pass();
         try{
-            BeanUtils.copyProperties(dto,users);
-            userService.addUser(users);
+            Users user = userService.getUserByUser_account(user_account);
+            if(user != null){
+                result.setCode(org.springframework.http.HttpStatus.FOUND.value());
+                result.setMessage("该用户已存在");
+            }else{
+                BeanUtils.copyProperties(dto,users);
+                result.setData(users);
+                userService.addUser(users);
+            }
+
         }catch (Exception e){
             result.setCode(HttpStatus.INTERNAL_SERVER_ERROR.value);
             result.setMessage(e.getMessage());
