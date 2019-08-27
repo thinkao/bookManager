@@ -19,6 +19,8 @@ public class Book {
     @Column(length = 32)
     private double book_price;
     @Column(length = 32)
+    private String book_kind;
+    @Column(length = 32)
     private int book_num;
     @Column(length = 32)
     private String pub_id;
@@ -26,13 +28,21 @@ public class Book {
     public Book() {
     }
 
-    public Book(String book_id, String book_name, String book_editor, double book_price, int book_num, String pub_id) {
-        this.book_id = book_id;
+    public Book(String book_name, String book_editor, double book_price, String book_kind, int book_num, String pub_id) {
         this.book_name = book_name;
         this.book_editor = book_editor;
         this.book_price = book_price;
+        this.book_kind = book_kind;
         this.book_num = book_num;
         this.pub_id = pub_id;
+    }
+
+    public String getBook_kind() {
+        return book_kind;
+    }
+
+    public void setBook_kind(String book_kind) {
+        this.book_kind = book_kind;
     }
 
     public String getBook_id() {

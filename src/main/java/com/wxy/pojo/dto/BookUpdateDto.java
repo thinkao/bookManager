@@ -18,9 +18,19 @@ public class BookUpdateDto {
     @ApiModelProperty("${item.note}")
     private double book_price;
     @ApiModelProperty("${item.note}")
+    private double book_kind;
+    @ApiModelProperty("${item.note}")
     private int book_num;
     @ApiModelProperty("${item.note}")
     private String pub_id;
+
+    public double getBook_kind() {
+        return book_kind;
+    }
+
+    public void setBook_kind(double book_kind) {
+        this.book_kind = book_kind;
+    }
 
     public String getBook_id() {
         return book_id;
