@@ -10,7 +10,7 @@
     </select>
 
     <insert id="addUser" parameterType="com.wxy.pojo.Users">
-        insert into users(user_id,user_name,user_account,user_pass) value (#{user_id},#{user_name},#{user_account},#{user_passwd})
+        insert into users(user_account,user_pass) value (#{user_account},#{user_passwd})
     </insert>
 
     <delete id="deleteUser" parameterType="String">

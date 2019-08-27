@@ -1,39 +1,23 @@
-package com.wxy.pojo;
+package com.wxy.pojo.dto;
 
-import org.hibernate.annotations.GenericGenerator;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModelProperty;
 
-import javax.persistence.*;
+@Api("书籍管理")
+public class BookInsertDto {
 
-@Entity
-@Table(name = "book")
-public class Book {
-    @Id
-    @GenericGenerator(name = "uuid", strategy = "uuid")
-    @GeneratedValue(generator = "uuid")
-    @Column(length = 32)
+    @ApiModelProperty("${item.note}")
     private String book_id;
-    @Column(length = 32)
+    @ApiModelProperty("${item.note}")
     private String book_name;
-    @Column(length = 32)
+    @ApiModelProperty("${item.note}")
     private String book_editor;
-    @Column(length = 32)
+    @ApiModelProperty("${item.note}")
     private double book_price;
-    @Column(length = 32)
+    @ApiModelProperty("${item.note}")
     private int book_num;
-    @Column(length = 32)
+    @ApiModelProperty("${item.note}")
     private String pub_id;
-
-    public Book() {
-    }
-
-    public Book(String book_id, String book_name, String book_editor, double book_price, int book_num, String pub_id) {
-        this.book_id = book_id;
-        this.book_name = book_name;
-        this.book_editor = book_editor;
-        this.book_price = book_price;
-        this.book_num = book_num;
-        this.pub_id = pub_id;
-    }
 
     public String getBook_id() {
         return book_id;

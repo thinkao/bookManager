@@ -28,12 +28,6 @@ public class UserServiceImpl implements UserService<UserQueryDto>{
         return userMapper.getUsersAll();
     }
 
-    /*测试数据*/
-    @Override
-    public List<Users> getUsersAll() {
-        return userMapper.getUsersAll();
-    }
-
     @Override
     public Users getUserByUser_id(String user_id) {
         Optional<Users> o =  userRepository.findById(user_id);

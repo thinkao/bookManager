@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wxy.mapper.BookMapper">
-    <select id="getBookAll" resultType="com.wxy.pojo.Book">
-        select * from book as b,publisher as p where b.pub_id = p.pub_id;
+    <select id="getBookByKind" resultType="com.wxy.pojo.Book">
+        select * from book as b,publisher as p where b.pub_id = p.pub_id and book_kind = #{book_kind}
     </select>
 
     <select id="getBookByBook_id" parameterType="String" resultType="com.wxy.pojo.Book">
         select * from book where book_id = #{book_id}
     </select>
 
+    <select id="getBookByBook_name" parameterType="String" resultType="com.wxy.pojo.Book">
+        select * from book where book_name = #{book_name}
+    </select>
+
     <insert id="addBook" parameterType="com.wxy.pojo.Book">
-        insert into book values (#{book_id},#{book_name},#{book_editor},#{book_price},#{book_num},#{pub_id})
+        insert into book values (#{book_id},#{book_name},#{book_editor},#{book_price},#{book_kind},#{book_num},#{pub_id})
     </insert>
 
     <delete id="deleteBook" parameterType="String">

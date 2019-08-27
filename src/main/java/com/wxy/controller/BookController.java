@@ -1,17 +1,25 @@
 package com.wxy.controller;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
 import com.wxy.pojo.Book;
+import com.wxy.pojo.dto.BookInsertDto;
+import com.wxy.pojo.dto.BookUpdateDto;
+import com.wxy.response.BaseResult;
+import com.wxy.response.HttpStatus;
 import com.wxy.service.BookService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin
 @Api("书籍管理")
 @RestController
 @RequestMapping("/book")
@@ -19,37 +27,124 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @ApiOperation(value = "获取所有书籍信息",notes = "")
-    @RequestMapping(value = "/getAll",method = RequestMethod.GET)
-    public List<Book> getBookAll(){
-        return bookService.getBookAll();
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
+    @ApiOperation(value = "通过种类获取该类所有书籍信息",notes = "")
+    @RequestMapping(value = "/getAll/{book_kind}",method = RequestMethod.GET)
+    public BaseResult getBookAll(@PathVariable String book_kind){
+        BaseResult result = new BaseResult();
+        try {
+            result.setData(bookService.getBookByKind(book_kind));
+        }catch (Exception e){
+            result.setCode(org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR.value());
+            result.setMessage(e.getMessage());
+            logger.error("根据ID查询错误{}", e.getMessage());
+            e.printStackTrace();
+        }
+        return result;
     }
 
     @ApiOperation(value = "根据书籍编号获取书籍信息",notes = "")
     @RequestMapping(value = "/getBookBy/{book_id}",method = RequestMethod.GET)
-    public Book getBookByBook_id(@PathVariable String book_id){
-        Book book =  bookService.getBookByBook_id(book_id);
-        return book;
+    public BaseResult getBookByBook_id(@PathVariable String book_id){
+        BaseResult result = new BaseResult();
+        try {
+            result.setData(bookService.getBookByBook_id(book_id));
+        }catch (Exception e){
+            result.setCode(org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR.value());
+            result.setMessage(e.getMessage());
+            logger.error("根据ID查询错误{}", e.getMessage());
+            e.printStackTrace();
+        }
+        return result;
     }
 
     @ApiOperation(value = "修改书籍信息",notes = "")
     @RequestMapping(value = "/update",method = RequestMethod.POST)
-    public String update(Book book){
-        bookService.update(book);
-        return "success";
+    public BaseResult update(@RequestBody @Validated BookUpdateDto dto, BindingResult bindingResult){
+
+        BaseResult result = new BaseResult();
+        /*参数校验*/
+        if (bindingResult.hasErrors()) {
+            FieldError fieldError = bindingResult.getFieldError();
+            logger.error("修改参数错误:{}", fieldError.getDefaultMessage());
+            result.setCode(org.springframework.http.HttpStatus.BAD_REQUEST.value());
+            result.setMessage(fieldError.getDefaultMessage());
+            return result;
+        }
+
+        try{
+            Book book = bookService.getBookByBook_id(dto.getBook_id());
+            if(book != null){
+                BeanUtils.copyProperties(dto, book);
+                bookService.updateBook(book);
+                result.setMessage("修改成功");
+            }
+        }catch (Exception e){
+            result.setCode(org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR.value());
+            result.setMessage(e.getMessage());
+            logger.error("修改错误{}", e.getMessage());
+            e.printStackTrace();
+        }
+        return result;
     }
 
     @ApiOperation(value = "添加新的书籍",notes = "")
-    @RequestMapping(value = "/add",method = RequestMethod.GET)
-    public String addBook(Book book){
-        bookService.addBook(book);
-        return "success";
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
+    public BaseResult addBook(@RequestBody @Validated BookInsertDto dto, BindingResult bindingResult){
+        BaseResult result = new BaseResult();
+        /*校验参数*/
+        if(bindingResult.hasErrors()){
+            FieldError fieldError =  bindingResult.getFieldError();
+            logger.error("新增参数错误：{}",fieldError.getDefaultMessage());
+            result.setCode(HttpStatus.BAD_REQUEST.value);
+            result.setMessage((fieldError.getDefaultMessage()));
+            return result;
+        }
+        Book book = new Book();
+        String book_name = dto.getBook_name();
+        System.out.println("书名："+book_name);
+        try{
+            Book book1 = bookService.getBookByBook_name(book_name);
+            System.out.println("success2");
+            if(book1 != null){
+                System.out.println("1书籍本数为："+dto.getBook_num());
+                book1.setBook_num(dto.getBook_num()+1);
+                System.out.println("2书籍本数为："+book1.getBook_num());
+                result.setData(book1);
+                //BeanUtils.copyProperties(dto,book);
+                bookService.updateBook(book1);
+                result.setCode(org.springframework.http.HttpStatus.FOUND.value());
+                result.setMessage("书籍重复，本数+1");
+
+            }else{
+                BeanUtils.copyProperties(dto,book);
+                result.setData(book);
+                bookService.addBook(book);
+            }
+
+        }catch (Exception e){
+            result.setCode(HttpStatus.INTERNAL_SERVER_ERROR.value);
+            result.setMessage(e.getMessage());
+            logger.error("新增参数错误{}",e.getMessage());
+            e.printStackTrace();
+        }
+        return result;
     }
 
     @ApiOperation(value ="删除书籍",notes = "")
-    @RequestMapping(value = "/delete",method = RequestMethod.DELETE)
-    public String delete(String book_id){
-        bookService.deleteBook(book_id);
-        return "success";
+    @RequestMapping(value = "/delete/{book_id}",method = RequestMethod.DELETE)
+    public BaseResult delete(@PathVariable String book_id){
+        BaseResult result = new BaseResult();
+        try {
+            bookService.deleteBook(book_id);
+            result.setMessage("删除成功");
+        }catch (Exception e){
+            result.setCode(HttpStatus.INTERNAL_SERVER_ERROR.value);
+            result.setMessage(e.getMessage());
+            logger.error("根据ID删除错误：{}",e.getMessage());
+            e.printStackTrace();
+        }
+        return result;
     }
 }

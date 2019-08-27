@@ -75,12 +75,12 @@ public class UserController {
     }
 
     @ApiOperation("删除用户")
-    @DeleteMapping("/deleteUser")
+    @DeleteMapping("/deleteUser/{user_id}")
     public BaseResult deleteUser(@PathVariable String user_id){
         BaseResult result = new BaseResult();
 
         try {
-            userService.deleteUser( user_id);
+            userService.deleteUser(user_id);
         }catch (Exception e){
             result.setCode(HttpStatus.INTERNAL_SERVER_ERROR.value);
             result.setMessage(e.getMessage());
@@ -117,14 +117,6 @@ public class UserController {
             e.printStackTrace();
         }
         return result;
-    }
-
-
-    /*测试*/
-    @RequestMapping(value = "/a",method = RequestMethod.GET)
-    public List<Users> getAll(){
-        List<Users> list  = userService.getUsersAll();
-        return list;
     }
 
     @ApiOperation("分页查询")

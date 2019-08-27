@@ -1,8 +1,19 @@
 package com.wxy.pojo;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "publisher")
 public class Publisher {
+    @Id
+    @GenericGenerator(name = "uuid", strategy = "uuid")
+    @GeneratedValue(generator = "uuid")
     private String pub_id;
+    @Column(length = 32)
     private String pub_name;
+    @Column(length = 32)
     private String pub_addr;
 
     public Publisher() {

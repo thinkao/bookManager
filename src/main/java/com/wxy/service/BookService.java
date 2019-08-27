@@ -1,31 +1,28 @@
 package com.wxy.service;
 
 import com.wxy.mapper.BookMapper;
+import com.wxy.page.PageQuery;
 import com.wxy.pojo.Book;
+import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class BookService {
+public interface BookService<T extends PageQuery> {
 
-    @Autowired
-    private BookMapper bookMapper;
+    List<Book> getBookByKind(String book_kind);
 
-    public List<Book> getBookAll(){
-        return bookMapper.getBookAll();
-    }
-    public void addBook(Book book){
-        bookMapper.addBook(book);
-    }
-    public void deleteBook(String book_id){
-        bookMapper.deleteBook(book_id);
-    }
-    public void update(Book book){
-        bookMapper.updateBook(book);
-    }
-    public Book getBookByBook_id(String book_id){
-        return bookMapper.getBookByBook_id(book_id);
-    }
+    Book getBookByBook_id(String book_id);
+
+    Book getBookByBook_name(String book_name);
+
+    Book addBook(Book book);
+
+    Book updateBook(Book book);
+
+    void deleteBook(String book_id);
+
+    Integer countPage(T query);
 }
