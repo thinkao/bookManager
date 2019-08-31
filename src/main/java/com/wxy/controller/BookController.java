@@ -109,7 +109,7 @@ public class BookController {
             System.out.println("success2");
             if(book1 != null){
                 System.out.println("1书籍本数为："+dto.getBook_num());
-                book1.setBook_num(dto.getBook_num()+1);
+                book1.setBook_num(book1.getBook_num()+1);
                 System.out.println("2书籍本数为："+book1.getBook_num());
                 result.setData(book1);
                 //BeanUtils.copyProperties(dto,book);
@@ -118,6 +118,7 @@ public class BookController {
                 result.setMessage("书籍重复，本数+1");
 
             }else{
+                dto.setBook_num(1);
                 BeanUtils.copyProperties(dto,book);
                 result.setData(book);
                 bookService.addBook(book);
