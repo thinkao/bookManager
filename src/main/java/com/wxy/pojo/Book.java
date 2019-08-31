@@ -19,31 +19,41 @@ public class Book {
     @Column(length = 32)
     private double book_price;
     @Column(length = 32)
-    private String book_kind;
-    @Column(length = 32)
     private int book_num;
     @Column(length = 32)
-    private String pub_id;
+    private String kind_name;
+    @Column(length = 32)
+    private String pub_name;
+
 
     public Book() {
     }
 
-    public Book(String book_name, String book_editor, double book_price, String book_kind, int book_num, String pub_id) {
+    public Book(String book_name, String book_editor, double book_price, int book_num, String kind_name, String pub_name) {
         this.book_name = book_name;
         this.book_editor = book_editor;
         this.book_price = book_price;
-        this.book_kind = book_kind;
         this.book_num = book_num;
-        this.pub_id = pub_id;
+        this.kind_name = kind_name;
+        this.pub_name = pub_name;
     }
 
-    public String getBook_kind() {
-        return book_kind;
+    public String getKind_name() {
+        return kind_name;
     }
 
-    public void setBook_kind(String book_kind) {
-        this.book_kind = book_kind;
+    public void setKind_name(String kind_name) {
+        this.kind_name = kind_name;
     }
+
+    public String getPub_name() {
+        return pub_name;
+    }
+
+    public void setPub_name(String pub_name) {
+        this.pub_name = pub_name;
+    }
+
 
     public String getBook_id() {
         return book_id;
@@ -85,11 +95,4 @@ public class Book {
         this.book_num = book_num;
     }
 
-    public String getPub_id() {
-        return pub_id;
-    }
-
-    public void setPub_id(String pub_id) {
-        this.pub_id = pub_id;
-    }
 }

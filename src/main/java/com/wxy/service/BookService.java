@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public interface BookService<T extends PageQuery> {
 
-    List<Book> getBookByKind(String book_kind);
+    List<Book> getBookByKind(String kind_name);
 
     Book getBookByBook_id(String book_id);
 

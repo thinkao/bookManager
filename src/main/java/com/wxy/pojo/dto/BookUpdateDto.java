@@ -18,18 +18,26 @@ public class BookUpdateDto {
     @ApiModelProperty("${item.note}")
     private double book_price;
     @ApiModelProperty("${item.note}")
-    private double book_kind;
+    private String kind_name;
     @ApiModelProperty("${item.note}")
     private int book_num;
     @ApiModelProperty("${item.note}")
-    private String pub_id;
+    private String pub_name;
 
-    public double getBook_kind() {
-        return book_kind;
+    public String getKind_name() {
+        return kind_name;
     }
 
-    public void setBook_kind(double book_kind) {
-        this.book_kind = book_kind;
+    public void setKind_name(String kind_name) {
+        this.kind_name = kind_name;
+    }
+
+    public String getPub_name() {
+        return pub_name;
+    }
+
+    public void setPub_name(String pub_name) {
+        this.pub_name = pub_name;
     }
 
     public String getBook_id() {
@@ -64,6 +72,7 @@ public class BookUpdateDto {
         this.book_price = book_price;
     }
 
+
     public int getBook_num() {
         return book_num;
     }
@@ -72,11 +81,4 @@ public class BookUpdateDto {
         this.book_num = book_num;
     }
 
-    public String getPub_id() {
-        return pub_id;
-    }
-
-    public void setPub_id(String pub_id) {
-        this.pub_id = pub_id;
-    }
 }

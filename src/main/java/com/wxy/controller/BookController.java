@@ -30,11 +30,11 @@ public class BookController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @ApiOperation(value = "通过种类获取该类所有书籍信息",notes = "")
-    @RequestMapping(value = "/getAll/{book_kind}",method = RequestMethod.GET)
-    public BaseResult getBookAll(@PathVariable String book_kind){
+    @RequestMapping(value = "/getAll/{kind_name}",method = RequestMethod.GET)
+    public BaseResult getBookAll(@PathVariable String kind_name){
         BaseResult result = new BaseResult();
         try {
-            result.setData(bookService.getBookByKind(book_kind));
+            result.setData(bookService.getBookByKind(kind_name));
         }catch (Exception e){
             result.setCode(org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR.value());
             result.setMessage(e.getMessage());

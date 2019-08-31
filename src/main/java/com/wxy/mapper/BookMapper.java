@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface BookMapper {
 
-    List<Book> getBookByKind(String book_kind);
+    List<Book> getBookByKind(String kind_name);
 
     Book getBookByBook_id(String book_id);
 
