@@ -101,16 +101,14 @@ public class BookController {
             result.setMessage((fieldError.getDefaultMessage()));
             return result;
         }
+
         Book book = new Book();
         String book_name = dto.getBook_name();
-        System.out.println("书名："+book_name);
         try{
             Book book1 = bookService.getBookByBook_name(book_name);
             System.out.println("success2");
             if(book1 != null){
-                System.out.println("1书籍本数为："+dto.getBook_num());
                 book1.setBook_num(book1.getBook_num()+1);
-                System.out.println("2书籍本数为："+book1.getBook_num());
                 result.setData(book1);
                 //BeanUtils.copyProperties(dto,book);
                 bookService.updateBook(book1);

@@ -14,7 +14,7 @@
     </select>
 
     <insert id="addBook" parameterType="com.wxy.pojo.Book">
-        insert into book values (#{book_id},#{book_name},#{book_editor},#{book_price},#{book_num},#{pub_name},#{kind_name})
+        insert into book values (#{book_id},#{book_name},#{book_editor},#{book_price},#{book_num},#{pub_name},#{kind_name}),#{book_picture}
     </insert>
 
     <delete id="deleteBook" parameterType="String">

@@ -24,18 +24,39 @@ public class Book {
     private String kind_name;
     @Column(length = 32)
     private String pub_name;
-
+    @Column(length = 32)
+    private String picture;
+    @Column(length = 32)
+    private String picture_name;
 
     public Book() {
     }
 
-    public Book(String book_name, String book_editor, double book_price, int book_num, String kind_name, String pub_name) {
+    public Book(String book_name, String book_editor, double book_price, int book_num, String kind_name, String pub_name, String picture, String picture_name) {
         this.book_name = book_name;
         this.book_editor = book_editor;
         this.book_price = book_price;
         this.book_num = book_num;
         this.kind_name = kind_name;
         this.pub_name = pub_name;
+        this.picture = picture;
+        this.picture_name = picture_name;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public String getPicture_name() {
+        return picture_name;
+    }
+
+    public void setPicture_name(String picture_name) {
+        this.picture_name = picture_name;
     }
 
     public String getKind_name() {

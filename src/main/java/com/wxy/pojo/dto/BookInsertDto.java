@@ -20,9 +20,29 @@ public class BookInsertDto {
     private int book_num;
     @ApiModelProperty("${item.note}")
     private String pub_name;
+    @ApiModelProperty("${item.note}")
+    private String picture;
+    @ApiModelProperty("${item.note}")
+    private String picture_name;
 
     public String getKind_name() {
         return kind_name;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public String getPicture_name() {
+        return picture_name;
+    }
+
+    public void setPicture_name(String picture_name) {
+        this.picture_name = picture_name;
     }
 
     public void setKind_name(String kind_name) {
