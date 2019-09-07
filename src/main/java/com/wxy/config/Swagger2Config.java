@@ -1,4 +1,4 @@
-package com.wxy;
+package com.wxy.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
