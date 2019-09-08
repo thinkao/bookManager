@@ -11,6 +11,17 @@ public class BookQueryDto extends PageQuery {
     @ApiModelProperty("${item.note}")
     private String book_name;
 
+    @ApiModelProperty("${item.note}")
+    private String kind_name;
+
+    public String getKind_name() {
+        return kind_name;
+    }
+
+    public void setKind_name(String kind_name) {
+        this.kind_name = kind_name;
+    }
+
     public String getBook_id() {
         return book_id;
     }

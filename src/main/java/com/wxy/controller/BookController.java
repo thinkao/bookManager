@@ -1,8 +1,10 @@
 package com.wxy.controller;
 
 import com.fasterxml.jackson.databind.ser.Serializers;
+import com.wxy.page.PageResult;
 import com.wxy.pojo.Book;
 import com.wxy.pojo.dto.BookInsertDto;
+import com.wxy.pojo.dto.BookQueryDto;
 import com.wxy.pojo.dto.BookUpdateDto;
 import com.wxy.response.BaseResult;
 import com.wxy.response.HttpStatus;
@@ -28,6 +30,33 @@ public class BookController {
     private BookService bookService;
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
+    @ApiOperation("分页查询")
+    @PostMapping("/page")
+    public BaseResult page(@RequestBody BookQueryDto query){
+        BaseResult result = new BaseResult();
+
+        PageResult<Book> page = new PageResult<>();
+
+        //初始化分页参数
+        query.init();
+
+        try {
+            int total = bookService.countPage(query);
+            page.setTotal(total);
+            if(total>0){
+            page.setRows(bookService.listPage(query));
+            }
+        }catch (Exception e){
+            result.setCode(org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR.value());
+            result.setMessage(e.getMessage());
+            logger.error("分页查询错误{}", e.getMessage());
+            e.printStackTrace();
+        }
+        result.setData(page);
+        return result;
+    }
+
 
     @ApiOperation(value = "通过种类获取该类所有书籍信息",notes = "")
     @RequestMapping(value = "/getAll/{kind_name}",method = RequestMethod.GET)

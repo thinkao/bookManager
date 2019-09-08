@@ -2,6 +2,7 @@ package com.wxy.mapper;
 
 import com.wxy.pojo.Book;
 import com.wxy.pojo.dto.BookQueryDto;
+import org.apache.poi.ss.formula.functions.T;
 
 import java.util.List;
 
@@ -20,4 +21,6 @@ public interface BookMapper {
     void updateBook(Book book);
 
     Integer countPage(BookQueryDto query);
+
+    List<Book> listPage(BookQueryDto query);
 }

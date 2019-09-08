@@ -25,4 +25,6 @@ public interface BookService<T extends PageQuery> {
     void deleteBook(String book_id);
 
     Integer countPage(T query);
+
+    List<Book> listPage(T query);
 }

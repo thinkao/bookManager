@@ -66,4 +66,9 @@ public class BookServiceImpl implements BookService<BookQueryDto> {
     public Integer countPage(BookQueryDto query) {
         return bookMapper.countPage(query);
     }
+
+    @Override
+    public List<Book> listPage(BookQueryDto query) {
+        return bookMapper.listPage(query);
+    }
 }

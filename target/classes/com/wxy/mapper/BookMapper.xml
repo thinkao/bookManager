@@ -5,6 +5,14 @@
         select * from book where kind_name = #{kind_name}
     </select>
 
+    <select id="countPage" parameterType="com.wxy.pojo.dto.BookQueryDto" resultType="int">
+        select count(*) from book
+    </select>
+
+    <select id="listPage" parameterType="com.wxy.pojo.dto.BookQueryDto" resultType="com.wxy.pojo.Book">
+        select * from book limit #{limit} offset #{offset}
+    </select>
+
     <select id="getBookByBook_id" parameterType="String" resultType="com.wxy.pojo.Book">
         select * from book where book_id = #{book_id}
     </select>
