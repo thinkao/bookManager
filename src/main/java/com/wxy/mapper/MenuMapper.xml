@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxy.mapper.MenuMapper">
+    
+    <resultMap id="BaseMenuAll" type="com.wxy.pojo.Menu">
+        <id property="user_id" column="user_id" jdbcType="VARCHAR"></id>
+        <result property="menu_id" column="menu_id" jdbcType="VARCHAR"></result>
+        <result property="menu_name" column="menu_name" jdbcType="VARCHAR"></result>
+        <result property="menu_parent" column="menu_parent" jdbcType="VARCHAR"></result>
+        <result property="menu_url" column="menu_url" jdbcType="VARCHAR"></result>
+        <result property="role_id" column="role_id" jdbcType="VARCHAR"></result>
+        <result property="role_name" column="role_name" jdbcType="VARCHAR"></result>
+        <result property="user_name" column="user_name" jdbcType="VARCHAR"></result>
+        <result property="user_account" column="user_account" jdbcType="VARCHAR"></result>
+        <result property="user_pass" column="user_pass" jdbcType="VARCHAR"></result>
+        <result property="user_addr" column="user_addr" jdbcType="VARCHAR"></result>
+        <result property="user_phone" column="user_phone" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <sql id="BaseMenuList">
+        user_id,menu_id,menu_name,menu_parent，menu_url，role_id，role_name，user_name，user_account，user_pass，user_addr，user_phone
+    </sql>
+
+    <select id="getMenuAllOther" resultMap="BaseMenuAll">
+        select
+        <include refid="BaseMenuList"></include>
+        where user_id = #{user_id}
+    </select>
+
+    <select id="getMenuById" resultType="com.wxy.pojo.Menu">
+        select m.menu_id,m.menu_name,m.menu_parent,m.menu_url,ur.role_id,r.role_name,users.user_id,
+        users.user_name,users.user_account,users.user_pass,users.user_addr,users.user_phone
+        from menu as m,users_role as ur,role as r,users
+        where m.menu_id = ur.menu_id and ur.role_id = r.role_id and
+        r.user_id = users.user_id and users.user_id = #{user_id};
+    </select>
+    
+</mapper>
