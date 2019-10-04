@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d861dee9-320c-48df-be1c-3206103bb802" name="Default Changelist" comment="查询功能实现">
+    <list default="true" id="d861dee9-320c-48df-be1c-3206103bb802" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wxy/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wxy/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wxy/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wxy/mapper/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wxy/pojo/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wxy/pojo/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookInsertDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookInsertDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wxy/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wxy/mapper/BookMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/controller/BookController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
+            <state relative-caret-position="3212">
+              <caret line="166" column="13" selection-start-line="166" selection-start-column="13" selection-end-line="166" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,10 +32,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/mapper/BookMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/service/BookService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+            <state relative-caret-position="110">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,76 +43,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/Book.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1299#1300#0" expanded="true" />
-                <element signature="e#1345#1346#0" expanded="true" />
-                <element signature="e#1383#1384#0" expanded="true" />
-                <element signature="e#1422#1423#0" expanded="true" />
-                <element signature="e#1457#1458#0" expanded="true" />
-                <element signature="e#1513#1514#0" expanded="true" />
-                <element signature="e#1561#1562#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/mapper/BookMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="16" column="138" selection-start-line="16" selection-start-column="138" selection-end-line="16" selection-end-column="138" />
+            <state relative-caret-position="110">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookInsertDto.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="2992">
+              <caret line="160" column="55" selection-start-line="160" selection-start-column="55" selection-end-line="160" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#660#661#0" expanded="true" />
-                <element signature="e#692#693#0" expanded="true" />
-                <element signature="e#863#864#0" expanded="true" />
-                <element signature="e#893#894#0" expanded="true" />
-                <element signature="e#977#978#0" expanded="true" />
-                <element signature="e#1016#1017#0" expanded="true" />
-                <element signature="e#1051#1052#0" expanded="true" />
-                <element signature="e#1107#1108#0" expanded="true" />
-                <element signature="e#1155#1156#0" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
-                <element signature="e#784#785#0" expanded="true" />
-                <element signature="e#819#820#0" expanded="true" />
-                <element signature="e#850#851#0" expanded="true" />
-                <element signature="e#898#899#0" expanded="true" />
-                <element signature="e#938#939#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookQueryDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#321#322#0" expanded="true" />
-                <element signature="e#351#352#0" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="e#435#436#0" expanded="true" />
-                <element signature="e#471#472#0" expanded="true" />
-                <element signature="e#503#504#0" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
-                <element signature="e#595#596#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookUpdateDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
+            <state relative-caret-position="1034">
               <caret line="74" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -141,12 +85,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/Users.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="242">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+              <folding>
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#324#325#0" expanded="true" />
+                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#398#399#0" expanded="true" />
+                <element signature="e#430#431#0" expanded="true" />
+                <element signature="e#480#481#0" expanded="true" />
+                <element signature="e#522#523#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#594#595#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#694#695#0" expanded="true" />
+                <element signature="e#729#730#0" expanded="true" />
+                <element signature="e#760#761#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
+                <element signature="e#848#849#0" expanded="true" />
+                <element signature="e#884#885#0" expanded="true" />
+                <element signature="e#918#919#0" expanded="true" />
+                <element signature="e#970#971#0" expanded="true" />
+                <element signature="e#1016#1017#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1672">
+              <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookQueryDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#474#475#0" expanded="true" />
+                <element signature="e#516#517#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,14 +142,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/service/Impl/BookServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="1100">
+              <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#731#732#0" expanded="true" />
                 <element signature="e#784#785#0" expanded="true" />
                 <element signature="e#1019#1020#0" expanded="true" />
                 <element signature="e#1082#1083#0" expanded="true" />
+                <element signature="e#1757#1758#0" expanded="true" />
+                <element signature="e#1806#1807#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/mapper/BookMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -191,6 +192,11 @@
       <find>getAl</find>
       <find>kind_id</find>
       <find>pub_id</find>
+      <find>limit</find>
+      <find>count</find>
+      <find>kind</find>
+      <find>BookQueryDto</find>
+      <find>WorksummaryQueryDto</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -215,8 +221,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/config/GlobalConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/UserLoginDto.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/UserInsertDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/service/Impl/UserServiceImpl.java" />
@@ -227,15 +231,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/pojo/Kind.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookUpdateDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookQueryDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wxy/service/Impl/BookServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wxy/service/BookService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wxy/mapper/BookMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/pojo/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wxy/mapper/BookMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/pojo/Book.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookInsertDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wxy/pojo/Menu.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wxy/config/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wxy/service/BookService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wxy/mapper/BookMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wxy/service/Impl/BookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookQueryDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wxy/controller/BookController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wxy/page/PageQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wxy/mapper/BookMapper.xml" />
       </list>
     </option>
   </component>
@@ -258,7 +267,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -304,6 +312,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wxy" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wxy" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -322,7 +339,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wxy" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="book" type="b2602c69:ProjectViewProjectNode" />
@@ -332,7 +349,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wxy" type="462c0819:PsiDirectoryNode" />
               <item name="pojo" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="book" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wxy" type="462c0819:PsiDirectoryNode" />
+              <item name="response" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="book" type="b2602c69:ProjectViewProjectNode" />
@@ -365,6 +390,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,7 +402,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562226958946" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/OrderManager/OrderManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -413,7 +439,7 @@
       <module name="book" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wxy.*" />
+          <option name="PATTERN" value="com.wxy.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -469,6 +495,18 @@
       <workItem from="1567335378496" duration="6361000" />
       <workItem from="1567383051257" duration="2088000" />
       <workItem from="1567472180732" duration="8306000" />
+      <workItem from="1567557824417" duration="5288000" />
+      <workItem from="1567762393459" duration="687000" />
+      <workItem from="1567818771565" duration="1780000" />
+      <workItem from="1567838771093" duration="4434000" />
+      <workItem from="1567907960965" duration="6803000" />
+      <workItem from="1567931340648" duration="37000" />
+      <workItem from="1567935812798" duration="2586000" />
+      <workItem from="1567990509742" duration="10373000" />
+      <workItem from="1568041534083" duration="706000" />
+      <workItem from="1568187102928" duration="47000" />
+      <workItem from="1568600690971" duration="1398000" />
+      <workItem from="1570154179307" duration="597000" />
     </task>
     <task id="LOCAL-00001" summary="注册功能实现">
       <created>1566268889776</created>
@@ -512,16 +550,38 @@
       <option name="project" value="LOCAL" />
       <updated>1567430730611</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="王鑫垚改">
+      <created>1567557896633</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1567557896633</updated>
+    </task>
+    <task id="LOCAL-00008" summary="王鑫垚改redis配置">
+      <created>1567841307627</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567841307627</updated>
+    </task>
+    <task id="LOCAL-00009" summary="王鑫垚改">
+      <created>1567949041580</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1567949041580</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159847000" />
+    <option name="totallyTimeSpent" value="194583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22788204" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19571045" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -531,7 +591,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21246459" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29886687" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31400284" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -540,7 +600,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32956153" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -563,7 +623,9 @@
     <MESSAGE value="注册功能实现" />
     <MESSAGE value="王鑫垚" />
     <MESSAGE value="查询功能实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="查询功能实现" />
+    <MESSAGE value="王鑫垚改redis配置" />
+    <MESSAGE value="王鑫垚改" />
+    <option name="LAST_COMMIT_MESSAGE" value="王鑫垚改" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -596,23 +658,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/controller/LoginController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/Swagger2Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/response/PageInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1687">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/response/HttpStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -657,31 +702,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/config/GlobalConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-558">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.8.RELEASE/spring-web-5.0.8.RELEASE.jar!/org/springframework/web/bind/annotation/RequestHeader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/page/PageQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="43" column="30" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-          <folding>
-            <element signature="e#672#673#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -700,13 +724,6 @@
             <element signature="e#1956#1957#0" expanded="true" />
             <element signature="e#1998#1999#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1606">
-          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -787,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/UserInsertDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -828,20 +838,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/Publisher.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/Kind.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/service/BookService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        <state relative-caret-position="770">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+            <element signature="e#1299#1300#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1383#1384#0" expanded="true" />
+            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1513#1514#0" expanded="true" />
+            <element signature="e#1561#1562#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookInsertDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#1155#1156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/config/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1848">
+          <caret line="93" column="42" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/config/Swagger2Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="195" column="56" selection-start-line="195" selection-start-column="56" selection-end-line="195" selection-end-column="56" />
+        <state relative-caret-position="154">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -850,8 +902,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/Users.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        <state relative-caret-position="462">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/config/GlobalConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/response/PageInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="60" lean-forward="true" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/page/PageQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/controller/BookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3212">
+          <caret line="166" column="13" selection-start-line="166" selection-start-column="13" selection-end-line="166" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/service/BookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2992">
+          <caret line="160" column="55" selection-start-line="160" selection-start-column="55" selection-end-line="160" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -860,7 +977,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookUpdateDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
+        <state relative-caret-position="1034">
           <caret line="74" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -876,111 +993,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/mapper/BookMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        <state relative-caret-position="242">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#694#695#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1672">
+          <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookQueryDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/service/Impl/BookServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        <state relative-caret-position="1100">
+          <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#731#732#0" expanded="true" />
             <element signature="e#784#785#0" expanded="true" />
             <element signature="e#1019#1020#0" expanded="true" />
             <element signature="e#1082#1083#0" expanded="true" />
+            <element signature="e#1757#1758#0" expanded="true" />
+            <element signature="e#1806#1807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/mapper/BookMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/mapper/BookMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="16" column="138" selection-start-line="16" selection-start-column="138" selection-end-line="16" selection-end-column="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1299#1300#0" expanded="true" />
-            <element signature="e#1345#1346#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-            <element signature="e#1513#1514#0" expanded="true" />
-            <element signature="e#1561#1562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookInsertDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#1155#1156#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#898#899#0" expanded="true" />
-            <element signature="e#938#939#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/pojo/dto/BookQueryDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wxy/controller/BookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="110">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
