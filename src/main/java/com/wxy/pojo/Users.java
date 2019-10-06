@@ -22,17 +22,38 @@ public class Users {
     private String user_pass;
     @Column(length = 11)
     private String user_phone;
+    @Column(length = 32)
+    private String role_id;
+    @Column(length = 32)
+    private String role_name;
+
+    public String getRole_id() {
+        return role_id;
+    }
+
+    public void setRole_id(String role_id) {
+        this.role_id = role_id;
+    }
+
+    public String getRole_name() {
+        return role_name;
+    }
+
+    public void setRole_name(String role_name) {
+        this.role_name = role_name;
+    }
 
     public Users() {
     }
 
-    public Users(String user_id, String user_name, String user_addr, String user_account, String user_pass, String user_phone) {
-        this.user_id = user_id;
+    public Users(String user_name, String user_addr, String user_account, String user_pass, String user_phone, String role_id, String role_name) {
         this.user_name = user_name;
         this.user_addr = user_addr;
         this.user_account = user_account;
         this.user_pass = user_pass;
         this.user_phone = user_phone;
+        this.role_id = role_id;
+        this.role_name = role_name;
     }
 
     public String getUser_id() {

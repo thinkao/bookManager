@@ -3,6 +3,7 @@ package com.wxy.controller;
 import com.google.gson.Gson;
 import com.wxy.config.GlobalConfig;
 import com.wxy.page.PageResult;
+import com.wxy.pojo.Menu;
 import com.wxy.pojo.Users;
 import com.wxy.pojo.dto.UserInsertDto;
 import com.wxy.pojo.dto.UserLoginDto;
@@ -10,6 +11,7 @@ import com.wxy.pojo.dto.UserQueryDto;
 import com.wxy.pojo.dto.UserUpdateDto;
 import com.wxy.response.BaseResult;
 import com.wxy.response.HttpStatus;
+import com.wxy.service.MenuService;
 import com.wxy.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -32,6 +34,9 @@ import java.util.concurrent.TimeUnit;
 public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
+    @Autowired
+    private MenuService menuService;
 
     @Autowired
     private UserService userService;
@@ -85,6 +90,36 @@ public class UserController {
             result.setCode(HttpStatus.INTERNAL_SERVER_ERROR.value);
             result.setMessage(e.getMessage());
             logger.error("根据ID删除错误：{}",e.getMessage());
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    @ApiOperation("修改用户角色")
+    @PutMapping("/updateUserRole")
+    public BaseResult updateUserRole(@RequestBody @Validated UserUpdateDto dto, BindingResult bindingResult){
+        BaseResult result = new BaseResult();
+
+        /*参数校验*/
+        if (bindingResult.hasErrors()) {
+            FieldError fieldError = bindingResult.getFieldError();
+            logger.error("修改参数错误:{}", fieldError.getDefaultMessage());
+            result.setCode(org.springframework.http.HttpStatus.BAD_REQUEST.value());
+            result.setMessage(fieldError.getDefaultMessage());
+            return result;
+        }
+
+        try{
+            Users users1 = userService.getUserByUser_id(dto.getUser_id());
+            if(users1 != null){
+                users1.setRole_id(users1.getRole_id());
+                BeanUtils.copyProperties(dto, users1);
+                userService.updateUserRole(users1);
+            }
+        }catch (Exception e){
+            result.setCode(org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR.value());
+            result.setMessage(e.getMessage());
+            logger.error("修改错误{}", e.getMessage());
             e.printStackTrace();
         }
         return result;
@@ -148,7 +183,7 @@ public class UserController {
     }
 
     @ApiOperation("根据ID查询")
-    @GetMapping("/getById")
+    @GetMapping("/getById/{user_id}")
     public BaseResult getById(@PathVariable String user_id){
 
         BaseResult result = new BaseResult();

@@ -2,9 +2,10 @@ package com.wxy.mapper;
 
 import com.wxy.pojo.Users;
 import com.wxy.pojo.dto.UserQueryDto;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
-
+@Mapper
 public interface UserMapper {
 
     List<Users> getUsersAll();
@@ -18,6 +19,8 @@ public interface UserMapper {
     void deleteUser(String user_id);
 
     void updateUser(Users users);
+
+    void updateUserRole(Users users);
 
     Integer countPage(UserQueryDto query);
 

@@ -30,8 +30,9 @@ public class UserServiceImpl implements UserService<UserQueryDto>{
 
     @Override
     public Users getUserByUser_id(String user_id) {
-        Optional<Users> o =  userRepository.findById(user_id);
-        return o.orElse(null);
+        return userMapper.getUserByUser_id(user_id);
+        /*Optional<Users> o =  userRepository.findById(user_id);
+        return o.orElse(null);*/
     }
 
     @Override
@@ -56,6 +57,15 @@ public class UserServiceImpl implements UserService<UserQueryDto>{
 
     @Override
     public Users updateUser(Users users) {
+        Users result = null;
+        if(users!=null){
+            result = userRepository.save(users);
+        }
+        return result;
+    }
+
+    @Override
+    public Users updateUserRole(Users users) {
         Users result = null;
         if(users!=null){
             result = userRepository.save(users);

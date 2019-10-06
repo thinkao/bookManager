@@ -20,6 +20,8 @@ public interface UserService<T extends PageQuery> {
 
     Users updateUser(Users users);
 
+    Users updateUserRole(Users users);
+
     Integer countPage(T query);
 
 }
