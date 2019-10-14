@@ -10,6 +10,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class App {
     public static void main(String[] args) {
+        /*启动*/
         SpringApplication.run(App.class,args);
     }
 }
