@@ -23,7 +23,7 @@ public class PageQuery {
     protected Integer current;
 
     public void init(){
-
+        System.out.println("hehe");
         // 默认查询第1页
         if(current == null || current < 1){
             current = 1;
